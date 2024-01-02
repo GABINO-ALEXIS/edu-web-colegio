@@ -1,0 +1,61 @@
+/*@import './reset-css.css';*/
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --rojo : #E72E3A;
+  --negro: #211C1C;
+  --amarillo: #FFD787;
+  --blanco: #FFFFFF;
+  --celeste: #B2DFF1;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+body {
+  font-family: 'Baloo 2', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

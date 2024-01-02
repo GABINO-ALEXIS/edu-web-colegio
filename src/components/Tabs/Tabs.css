@@ -1,0 +1,33 @@
+.contenedorTab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contenedorBotones {
+    background-color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0px;
+    padding: 4px;
+    border-radius: 30px;
+    border-style: dashed;
+    border-width: 3px;
+    border-color: var(--negro);
+} 
+.activo, .apagado {
+    font-weight: 600;
+    padding: 5px 18px;
+    border-radius: 50px;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.activo {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+.apagado {
+    background-color: transparent;
+    color: var(--negro);
+}

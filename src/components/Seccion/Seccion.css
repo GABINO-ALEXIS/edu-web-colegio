@@ -1,0 +1,62 @@
+.componenteSeccion {
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: var(--blanco); 
+}
+.stylesHistoria {
+    margin-top: 6.25rem;
+    position: relative;
+}
+.stylesNiveles {
+    background-color: var(--amarillo);
+    background-image: url('../../assets/iconos/fondoAmarillo.svg');
+    background-position-x: 50%;
+    background-position-y: 50%;
+  
+}
+.stylesLlamanos {
+    background-color: var(--rojo);
+    background-image: url('../../assets/iconos/onda.svg');
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 35%;
+    background-size: 57%;
+    position: relative;
+}
+.wavesStyles {
+    position: relative;
+    padding: 88px 0px;
+}
+
+@media (max-width: 1025px) {
+    .componenteSeccion {
+        padding: 25px 23px;
+    }
+    .wavesStyles {
+        position: relative;
+        padding: 50px 23px;
+    }
+}
+@media (max-width: 925px) {
+    .stylesLlamanos {
+    background-size: 65%;
+    }
+    .stylesNiveles {
+    background-size: 100%;
+    background-position-x: 10%;
+    background-position-y: 10%;
+    }
+}
+@media (max-width: 825px) {
+    .stylesLlamanos {
+    background-size: 155%;
+    }
+    .stylesNiveles {
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position-y: 0%;
+    }
+}

@@ -1,0 +1,54 @@
+.cajaDescripcion {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 18.75rem;
+    color: var(--blanco);
+}
+.cajaCirculo, .circulo {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cajaCirculo {
+    border-style: dashed;
+    border-width: 3.5px;
+    border-color: var(--blanco);
+    /* width: clamp(13px, 5vw, 150px);
+    height: clamp(13px, 5vw, 150px); */
+    width: 8.125rem; 
+    height: 8.125rem;
+    margin: auto;
+   
+    position: relative;
+}
+.circulo {
+    background-color: var(--blanco);
+    width: 5.625rem;
+    height: 5.625rem; 
+}
+.arteIcon {
+    width: 70%;
+}
+.mundoIconos {
+    position: absolute;
+    width: 1.5625rem;
+    left: 0;
+    top: .625rem;
+}
+.cajaLetras {
+    text-align: center;
+}
+.cajaLetras p {
+    font-size: .875rem;
+    line-height: 110%;
+}
+@media (max-width: 1025px) {
+    .cajaDescripcion {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}

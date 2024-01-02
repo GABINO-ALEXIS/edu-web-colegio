@@ -1,0 +1,50 @@
+.menusContenido{
+    background-color: var(--rojo);
+    position: absolute;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    top: 5.625rem;
+    transition: all .6s ease;
+    box-shadow: 0rem 0rem .625rem 0rem rgba(0,0,0,0.5);
+}
+.submenuOpcion {
+    width: 100%;
+    display: block;
+    padding: .5625rem 1.875rem;
+    color: var(--blanco);
+}
+.submenuOpcion:hover { 
+    box-shadow: 0rem 0rem .625rem 0rem rgba(0,0,0,0.5);
+    color: var(--negro);
+}
+@media (max-width: 1020px)  {
+    .menusContenido{
+        display: grid;
+        grid-template-rows: var(--rows, 0fr);
+        transition: .3s grid-template-rows;
+        background-color: transparent;
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        box-shadow: none;
+    }
+    .submenus{
+        overflow: hidden;
+    }
+    .submenusLi{
+        width: 85%;
+        margin-left: auto;
+    }
+    .submenuOpcion{
+        width: auto;
+        padding: 1em 0;
+        color: #B6BABE;
+    }  
+    .submenuOpcion:hover {
+        background-color: transparent;
+        transform: none;
+        box-shadow: none;
+        color: #B6BABE;
+    }
+}
