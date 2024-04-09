@@ -1,0 +1,50 @@
+.heroLayout {
+    background-color: var(--rojo);
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+.titleHeroContent {
+    padding: 60px 0px 60px 75px;
+    flex: 2;
+    display: flex;
+}
+.imageHeroContent {
+    flex: 1;
+}
+.titleHero {
+    position: relative;
+    color: var(--blanco);
+    font-size: clamp(30px, 3.5vw, 40px);
+    z-index: 8;
+}
+.estrellaIconHero {
+    position: absolute;
+    top: 10%;
+    width: 2%;
+    left: 30%;
+}
+.estrellaIconHero2 {
+    position: absolute;
+    bottom: 12%;
+    width: 1%;
+    left: 10%;
+}
+.circuloRojoHero {
+    position: absolute;
+    width: 1.8%;
+    left: 40%;
+    bottom: 15%;
+}
+.circuloRojoHero2 {
+    position: absolute;
+    width: 1%;
+    left: 2%;
+    bottom: 40%;
+}
+
+@media (max-width: 1025px){
+    .titleHeroContent {
+        padding: 30px 0px 30px 30px;
+    }
+}

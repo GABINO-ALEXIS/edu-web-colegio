@@ -1,0 +1,24 @@
+.CBoton {
+    border-radius: 35px;
+    padding: 4px; 
+    font-weight: 600;
+}
+.leer{
+    padding: 2px 28px;
+    border-radius: 30px;
+    border-style: dashed;
+    border-width: 3px;
+}
+.negroAmarillo {
+    color: var(--negro);
+    background-color: var(--amarillo);
+}
+.blancoNegro {
+    color: var(--blanco);
+    background-color: var(--negro);
+}
+.negroBlanco {
+    color: var(--negro);
+    background-color: var(--blanco);
+}
+

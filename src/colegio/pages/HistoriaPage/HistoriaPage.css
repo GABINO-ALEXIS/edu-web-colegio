@@ -1,0 +1,38 @@
+.historiaPage {
+    padding-top: 74px;
+    overflow: hidden;
+}
+.historiaPageContent {
+    width: 100%;
+    margin: 80px 0px 190px 0px;
+    padding: 0px 20px;
+    position: relative;
+}
+.globoHP {
+    position: absolute;
+    right: 15%;
+    top: -27%;
+    width: 8%;
+    z-index: 5;
+}
+.globoHP2 {
+    position: absolute;
+    left: 12%;
+    bottom: -50%;
+    width: 6%;
+    z-index: 5;
+}
+@media (max-width: 1025px){
+    .historiaPageContent {
+    margin: 70px 0px 70px 0px;
+    }
+}
+@media (max-width: 920px) {
+    .globoHP {
+        top: -13%;
+    }
+    .globoHP2 {
+      bottom: -16%;
+      left: 50%;
+    }
+}

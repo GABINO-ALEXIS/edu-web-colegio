@@ -1,0 +1,7 @@
+export * from './Footer/Footer'
+export * from './Header/Header'
+export * from './Main/Main'
+export * from './SeccionPortadaImagen/SeccionPortadaImagen'
+export * from './SeccionValores/SeccionValores'
+export * from './HeroLayout/HeroLayout'
+export * from './ImagenCuadroLayout/ImagenCuadroLayout'

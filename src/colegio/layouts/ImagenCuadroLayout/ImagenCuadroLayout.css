@@ -1,0 +1,18 @@
+.imagenCuadroLayout {
+    display: flex;
+    max-width: 1153px;
+    position: relative;
+    margin: auto;
+}
+.imageCuadro {
+    max-width: 450px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+@media (max-width: 920px) {
+    .imagenCuadroLayout {
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 30px;
+    }
+}

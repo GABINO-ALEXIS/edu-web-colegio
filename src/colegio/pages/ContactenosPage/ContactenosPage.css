@@ -1,0 +1,54 @@
+.contactenosPage {
+    padding-top: 74px;  
+    margin-bottom: 35px;
+    overflow: hidden;
+}
+.mapaContent {
+  width: 100%;
+  height: 560px;
+  background-color: gray;
+}
+.formularioContactoContent {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 0px 20px;
+}
+.formularioContactoSub {
+  position: relative;
+  margin-right: 220px;
+}
+.dinosaurioCP {
+  position: absolute;
+  width: 24%;
+  top: -29%;
+}
+.globoCP {
+  position: absolute;
+  width: 10%;
+  right: 0;
+  top: 30%;
+  animation: floating 3s ease-in-out infinite
+}
+@media (max-width: 1090px) {
+    .formularioContactoSub {
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .formularioContactoContent {
+      margin-top: 50px;
+    }
+    .dinosaurioCP {
+      top: -12%;
+    }
+}
+@media (max-width: 603px) {
+    .dinosaurioCP {
+      top: -8%;
+    }
+}

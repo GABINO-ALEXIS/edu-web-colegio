@@ -1,0 +1,79 @@
+.menusListasLi {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.menusListasLi {
+    height: auto;
+    display: block;
+    cursor: pointer;
+} 
+.menusLink {
+    display: flex;
+    align-items: center;
+}
+.botonInicio {
+    background-color: var(--amarillo);
+    padding: 15px 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: var(--negro);
+    height: 0px;
+    font-weight: bold;
+}
+.menusFlechas {
+    width: 1.5625rem;
+    height: 1.5625rem;
+}
+.menusListasLi:hover .menusContenido{
+    visibility: visible;  
+    top: 3.4375rem; 
+    opacity: 1;
+}
+.menusListasLi {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.menusCheck{
+    display: none;
+}
+
+@media (max-width: 1020px)  {
+    .menusCheck{
+        display: block;
+    }
+    .menusCheck{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .menusFlechas{
+        margin-left: auto;
+        transform: var(--rotate, 0);
+        transition: .2s transform;
+    }
+    .botonInicio {
+        justify-content: start;
+    }
+    .menusListasLi {
+        height: auto;
+        display: block;
+    } 
+    .menusListasLi:has( :checked ){
+        --rows: 1fr;
+        --rotate: rotate(180deg);
+        --bg: #28303B;
+    }
+    .menusLink{
+    color: rgb(184, 187, 191);
+    padding: 1em .7em;
+    gap: .6rem;
+    position: relative;
+    background-color: var(--bg, transparent);
+    border-radius: 6px;
+    }
+}

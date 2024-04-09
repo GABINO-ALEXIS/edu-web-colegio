@@ -1,0 +1,27 @@
+.propuestaPedagogicaCardContent {
+  display: flex;
+  gap: 25px;    
+}
+.pedagogiaIconContent {
+  width: 73px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+.pedagogiaIcon {
+  background-color: #00CCB3;
+  border-radius: 25px;
+  width: 73px;
+  height: 70px;
+  position: relative;
+}
+.pedagogiaIcon img {
+    position: absolute;
+    right: -11px;
+}
+.pedagogiaTexto {
+  max-width: 300px;
+}
+.pedagogiaTexto > p {
+    line-height: 20px;
+}

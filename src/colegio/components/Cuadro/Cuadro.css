@@ -1,0 +1,98 @@
+.cuadro {
+    background-color: var(--celeste);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 25px;
+}
+.rayas {
+    width: 100%;
+    height: 100%;
+    border: 4px dashed  var(--blanco);
+    font-weight: 500;
+    padding: 15px;
+    border-radius: 18px;
+    max-height: 530px;
+    overflow-y: auto;
+}
+.positionAbsolute {
+    position: absolute;
+    max-width: 750px;
+    left: 400px;
+    top: 55px;
+}
+.borderAmarillo {
+    display: flex;
+    border: 3px dashed  var(--amarillo);
+    padding: 10px;
+}
+.borderCeleste {
+    display: flex;
+    border: 3px dashed  var(--celeste);
+    padding: 10px;
+}
+.propositoCard {
+    padding: 10px;
+    background-color: var(--blanco);
+    max-width: 500px;
+}
+.cuadroFrase {
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+.cuadroMetodologia {
+    max-width: 600px;
+}
+.formularioContactoRayas {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 160px;
+}
+.formularioContactoCuadro {
+    background-color: var(--amarillo);
+    max-width: 750px;
+}
+.descripcionContacto {
+    max-width: 500px;
+}
+.redSocialContent {
+    display: flex;
+    gap: 10px;
+}
+.informacionContacto {
+    display: flex;
+    gap: 10px;
+}
+.informacionContacto img {
+    width: 35px;
+    height: 35px;
+}
+.insigniaContacto {
+    max-width: 150px;
+}
+.camposContactoContent {
+    width: 400px;
+    position: absolute;
+    right: -35%;
+    top: 8%;
+}
+@media (max-width: 1090px) {
+    .camposContactoContent {
+       position: static;
+    }
+    .formularioContactoRayas {
+        padding-right: 30px;
+    }
+}
+@media (max-width: 920px) {
+    .positionAbsolute {
+        position: static;
+    }
+}

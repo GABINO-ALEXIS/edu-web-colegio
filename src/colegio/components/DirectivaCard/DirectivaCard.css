@@ -1,0 +1,36 @@
+.directivaCardContent {
+   position: relative;
+   text-align: center;
+   line-height: 16px;
+}
+.directivaCard {
+    width: 220px;
+    height: 240px;
+    position: absolute;
+    z-index: 2;
+    top: 17px;
+    left: 17px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.directivaCard img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.directivaCardSombra {
+    background-color: var(--amarillo);
+    width: 220px;
+    height: 240px;
+    border-radius: 15px;
+    border: 3px dashed  var(--rojo);
+    margin-bottom: 30px;
+}
+.directivaNombre {
+    font-size: 17px;
+    margin-left: 20px;
+}
+.directivaCargo {
+    color: var(--celeste);
+    margin-left: 20px;
+}

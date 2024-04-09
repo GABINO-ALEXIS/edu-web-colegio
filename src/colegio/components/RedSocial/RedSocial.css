@@ -1,0 +1,27 @@
+.contorno {
+    border-radius: 50%;
+    width: 52px; 
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed;
+    color: #fff;
+}
+.redSocial {
+    width: 41px; 
+    height: 41px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.azul {
+    background-color: #4e74c4;
+}
+.verde {
+    background-color: #2aa81a;
+}
+.negro {
+    background-color: #000000;
+}
