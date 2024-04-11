@@ -71,10 +71,12 @@
     right: -3.125rem;
     bottom: -4.0625rem;
     width: clamp(6.875rem, 11vw, 11.5625rem);
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 43%);
+    mask-image: linear-gradient (to bottom, black, transparent 43%);
 }
 .manchaRojaIcon2 {
     left: 1.5625rem;
-    bottom: -5.9375rem;
+    bottom: -50px;
     transform: rotate(20deg);
 }
 .rayaIcon {

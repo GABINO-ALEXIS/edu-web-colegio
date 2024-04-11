@@ -16,7 +16,7 @@ export const Tabs = () => {
           onClick={() => setMostrar(true)}
           className={mostrar ? 'activo' : 'apagado'}
         >
-          Preeescolar
+          Inicial
         </button>
         <button
           onClick={() => setMostrar(false)}
