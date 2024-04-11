@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-closing-tag-location */
 import { useState } from 'react'
 import { Card } from '../'
 import { m, AnimatePresence } from 'framer-motion'
