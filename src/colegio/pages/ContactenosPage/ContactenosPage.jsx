@@ -34,7 +34,13 @@ const ContactenosPage = () => {
       <div className='contactenosPage'>
         <HeroLayout titulo='Contáctenos' />
         <div className='mapaContent'>
-          mapa
+          <iframe
+            width='100%'
+            height='600'
+            src='https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=-11.837707676169686,%20-77.13669141871867+(Colegio%20Inmaculada%20Concepci%C3%B3n%20de%20Mar%C3%ADa)&amp;t=&amp;z=19&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'
+          >
+            <a href='https://www.gps.ie/'>gps tracker sport</a>
+          </iframe>
         </div>
         <div className='formularioContactoContent'>
           <img
