@@ -1,0 +1,1 @@
+import{j as i}from"./index-D7o7Rvxi.js";import{m as t}from"./MetaTags-unVnn6k4.js";const n=({children:a,clasesCuadro:o,clasesRayas:r})=>i.jsx(t.div,{className:`cuadro ${o}`,initial:{opacity:0,x:70},whileInView:{opacity:1,x:0},viewport:{amount:.4,once:!0},transition:{duration:1.8},children:i.jsx("div",{className:`rayas ${r}`,children:a})});export{n as C};
