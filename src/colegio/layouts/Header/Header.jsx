@@ -26,15 +26,19 @@ export const Header = () => {
     cerrarMenu()
   }, [pathname])
 
+  // const abrirNuevaPestana = () => {
+  //   window.open('/admin-page-ic/inicio-dashboard', '_blank') // Abre '/otra-pagina' en una nueva pestaña
+  // }
+
   return (
 
     <header className='header'>
 
       <nav className='nav'>
-
         <div className='navInsignia'>
           <Link to='/'><img src={insignia} title='Insignia del Colegio Inmaculada Concepción de María' /></Link>
         </div>
+
         <a href='#menu' className='navMenu'>
           <RiMenu3Fill className='iconosAbrirCerrar' />
         </a>

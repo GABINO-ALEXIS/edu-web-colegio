@@ -1,0 +1,14 @@
+.pagesContent {
+    background-color: #121515;
+    width: 100dvw;
+    height: 100dvh;
+    box-sizing: border-box;
+    padding: 25px;
+    display: flex;
+}
+@media (max-width: 1050px) {
+ .pagesContent {
+   display: block;
+   padding: 20px;
+ }   
+}

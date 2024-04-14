@@ -1,0 +1,98 @@
+.loginContent {
+  background-color: var(--celeste);
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 15px;
+  color: var(--blanco);
+}
+.formLogin {
+  width: 25rem;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  padding-top: 80px;
+  border-radius: 22px;
+  gap: 12px;
+  position: relative;
+  text-align: center;
+  line-height: 20px;
+}
+.textoL {
+    font-weight: 500;
+}
+.iniciarS {
+    margin-bottom: 10px;
+}
+.camposLogin, .btnLogin {
+  padding: 13px 60px;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}  
+.btnLogin {
+  margin-top: 13px;
+  background-color: var(--rojo);
+  color: var(--blanco);
+  font-weight: 600;
+  font-family: 'Baloo 2', sans-serif;
+  cursor: pointer;
+}
+.camposSpan {
+  position: relative;
+}
+.iconosCampos {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 23px;
+  height: 23px;
+  color: var(--negro);
+}
+.insigniaLogin {
+  max-width: 115px;
+  position: absolute;
+  top: -70px;
+  right: 50%;
+  transform: translateX(50%);
+}
+.camposLogin:focus {
+    outline: none;
+    border: solid 2px var(--rojo);
+}
+.eyesIcon {
+    color: var(--negro);
+    position: absolute;
+    right: 20px;
+    top:  10px;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+.btnLogin:disabled {
+  background-color: #f2f2f2; 
+  color: #808080; 
+  opacity: 0.7; 
+  cursor: not-allowed;
+}
+.campoIncorrecto {
+  border: 3px solid #F5B041 ;
+}
+.mError {
+  border: 2px solid #F5B041;
+  color: #F5B041;
+  padding: 7px 5px;
+  margin: 6px 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.mError svg {
+  width: 26px;
+  height: 26px;
+}
