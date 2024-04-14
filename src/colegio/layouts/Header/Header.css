@@ -33,11 +33,16 @@
     align-items: center;
     font-weight: 600;
 }
-.navMenu, .menusIcon{
+.navMenu, .menusIcon:not(.menusIconPanel){
     display: none;
 }
 .menus > li:hover {
     color: var(--negro);
+}
+.menusIconPanel {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
 }
 @media (max-width:1232px) {
     .navInsignia img {
@@ -110,5 +115,8 @@
         overflow-y: auto;
         clip-path: var(--clip, inset(0 0 100% 100%));
         transition: clip-path .5s; 
-    }   
+    }
+    .separador {
+      display: none;
+    }
 }

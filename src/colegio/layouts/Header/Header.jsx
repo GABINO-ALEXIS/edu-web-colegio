@@ -6,7 +6,7 @@ import {
   RiContactsBook2Line,
   RiDoorOpenLine
 } from 'react-icons/ri'
-import { MdOutlineSchool } from 'react-icons/md'
+import { MdOutlineAdminPanelSettings, MdOutlineSchool } from 'react-icons/md'
 import { BsBarChartSteps } from 'react-icons/bs'
 import { FaRegNewspaper } from 'react-icons/fa6'
 import { Link, useLocation } from 'react-router-dom'
@@ -36,7 +36,12 @@ export const Header = () => {
 
       <nav className='nav'>
         <div className='navInsignia'>
-          <Link to='/'><img src={insignia} title='Insignia del Colegio Inmaculada Concepción de María' /></Link>
+          <Link to='/inicio'>
+            <img
+              src={insignia}
+              title='Insignia del Colegio Inmaculada Concepción de María'
+            />
+          </Link>
         </div>
 
         <a href='#menu' className='navMenu'>
@@ -125,6 +130,12 @@ export const Header = () => {
             redireccion='/contactenos'
             componenteIcon={<RiContactsBook2Line className='menusIcon' />}
             texto='Contáctenos'
+          />
+          <span className='separador'>|</span>
+          <MenuItem
+            redireccion='/admin-page-ic/login'
+            componenteIcon={<MdOutlineAdminPanelSettings className='menusIcon menusIconPanel' />}
+            texto='Panel'
           />
         </ul>
 

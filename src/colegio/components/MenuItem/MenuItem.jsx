@@ -10,16 +10,17 @@ export const MenuItem = ({ a, redireccion, claseAdicional, componenteIcon, texto
     <li className='menusListasLi'>
 
       {a
-        ? (<a href={redireccion} className={`menusLink ${ClaseAdicional}`}>
+        ? (
+          <a href={redireccion} className={`menusLink ${ClaseAdicional}`}>
 
-          {componenteIcon}
-          <span className='menuOpcion'>{texto}</span>
-          {iconoFlecha && <RiArrowDropDownFill className='menusFlechas' />}
+            {componenteIcon}
+            <span className='menuOpcion'>{texto}</span>
+            {iconoFlecha && <RiArrowDropDownFill className='menusFlechas' />}
 
-          {input && (
-            <input type='checkbox' className='menusCheck' />
-          )}
-        </a>)
+            {input && (
+              <input type='checkbox' className='menusCheck' />
+            )}
+          </a>)
         : (<NavLink to={redireccion} className={`menusLink ${ClaseAdicional}`}>
 
           {componenteIcon}
@@ -29,7 +30,7 @@ export const MenuItem = ({ a, redireccion, claseAdicional, componenteIcon, texto
           {input && (
             <input type='checkbox' className='menusCheck' />
           )}
-        </NavLink>)}
+           </NavLink>)}
 
       {submenu && (
         <SubMenuItem array={array} />

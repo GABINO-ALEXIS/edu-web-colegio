@@ -5,6 +5,8 @@ import { insignia } from '../../../colegio/assets/iconos'
 import { useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { verificarAutenticacion } from '../../../store/auth/thunks'
+import { TbArrowBackUp } from 'react-icons/tb'
+import { useNavigate } from 'react-router-dom'
 import './LoginPage.css'
 
 let bolean = false
@@ -14,6 +16,7 @@ const initialForm = {
 }
 const LoginPage = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const { status, errorMessage } = useSelector((state) => state.auth)
   const [viewPassord, setViewPassord] = useState(false)
   const [formLogin, setFormLogin] = useState(initialForm)
@@ -39,6 +42,13 @@ const LoginPage = () => {
 
   return (
     <div className='loginContent'>
+      <button
+        className='btnRegresarInicio'
+        onClick={() => navigate('/inicio', { replace: true })}
+      >
+        <TbArrowBackUp />
+        Regresar al Inicio
+      </button>
       <form
         className='formLogin'
         onSubmit={onSubmit}
@@ -56,7 +66,7 @@ const LoginPage = () => {
           <MdEmail className='iconosCampos' />
           <input
             type='email'
-            placeholder='Usuario'
+            placeholder='Correo'
             className={`camposLogin ${campoIncorrecto ? 'campoIncorrecto' : null}`}
             name='email'
             value={email}

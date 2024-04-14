@@ -1,5 +1,5 @@
 .loginContent {
-  background-color: var(--celeste);
+  background-color: #1C2833;
   width: 100dvw;
   height: 100dvh;
   display: flex;
@@ -95,4 +95,24 @@
 .mError svg {
   width: 26px;
   height: 26px;
+}
+.btnRegresarInicio {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  color: var(--blanco);
+  background-color: var(--rojo);
+  border-radius: 10px;
+  padding: 5px 12px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.btnRegresarInicio svg {
+  width: 27px;
+  height: 27px;
 }

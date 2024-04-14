@@ -3,9 +3,11 @@ import {
   Route,
   Routes
 } from 'react-router-dom'
-import { Suspense, lazy } from 'react'
+import { Suspense, lazy, useEffect } from 'react'
 import { Footer, Header } from '../layouts'
 import LoadingPage from '../pages/LoadingPage/LoadingPage'
+import { useDispatch } from 'react-redux'
+import { cerrarSesion } from '../../store/auth/thunks'
 
 const PrimariaPage = lazy(() => import('../pages/PrimariaPage/PrimariaPage'))
 const HistoriaPage = lazy(() => import('../pages/HistoriaPage/HistoriaPage'))
@@ -18,6 +20,11 @@ const SomosPage = lazy(() => import('../pages/SomosPage/SomosPage'))
 const NoticiasPage = lazy(() => import('../pages/NoticiasPage/NoticiasPage'))
 
 const ColegioRoutes = () => {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(cerrarSesion())
+  }, [])
+
   return (
     <>
       <Header />
@@ -35,7 +42,6 @@ const ColegioRoutes = () => {
           <Route path='/*' element={<Navigate to='/inicio' replace />} />
         </Routes>
       </Suspense>
-
       <Footer />
     </>
   )
