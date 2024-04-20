@@ -11,6 +11,7 @@ import { BsBarChartSteps } from 'react-icons/bs'
 import { FaRegNewspaper } from 'react-icons/fa6'
 import { Link, useLocation } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
+import { IoDocumentAttachOutline } from 'react-icons/io5'
 import { insignia } from '../../assets/iconos'
 import { MenuItem } from '../../components'
 import './Header.css'
@@ -82,7 +83,7 @@ export const Header = () => {
             ]}
           />
           <MenuItem
-            redireccion='#'
+            redireccion='/admision'
             componenteIcon={<RiDoorOpenLine className='menusIcon' />}
             texto='Admisión'
           />
@@ -90,6 +91,25 @@ export const Header = () => {
           <MenuItem
             componenteIcon={<BsBarChartSteps className='menusIcon' />}
             texto='Niveles'
+            submenu
+            iconoFlecha
+            a
+            input
+            array={[
+              {
+                texto: 'Inicial',
+                redireccion: 'inicial'
+              },
+              {
+                texto: 'Primaria',
+                redireccion: 'primaria'
+              }
+            ]}
+          />
+
+          <MenuItem
+            componenteIcon={<IoDocumentAttachOutline className='menusIcon' />}
+            texto='Docs. de la I.E.P'
             submenu
             iconoFlecha
             a

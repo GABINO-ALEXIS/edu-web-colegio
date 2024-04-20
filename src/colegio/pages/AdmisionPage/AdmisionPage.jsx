@@ -1,12 +1,12 @@
-import { MetaTags, Noticias } from '../../components'
+import { MetaTags } from '../../components'
 import { HeroLayout } from '../../layouts'
-import './NoticiasPage.css'
+import './AdmisionPage.css'
 
-const NoticiasPage = () => {
+const AdmisionPage = () => {
   return (
     <>
       <MetaTags
-        title='Noticias | Colegio Particular Inmaculada Concepción de María'
+        title='Admisión | Colegio Particular Inmaculada Concepción de María'
         content='Bienvenidos al Colegio Inmaculada Concepción de María,
          donde enseñamos con amor y cultivamos valores
         sólidos, que forman la base de nuestra comunidad escolar, Inmaculada
@@ -14,14 +14,14 @@ const NoticiasPage = () => {
         donde cada niño se siente valorado y apoyado, para aprender y prosperar
          en un ambiente de cuidado y compromiso.'
       />
-      <div className='noticiasPage'>
-        <HeroLayout titulo='Noticias' />
-        <div className='noticiasContent'>
-          <Noticias />
+      <div className='admisionPage'>
+        <HeroLayout titulo='Admisión' />
+        <div className='admisionContent' id='my-pdf'>
+          nn
         </div>
       </div>
+
     </>
   )
 }
-
-export default NoticiasPage
+export default AdmisionPage

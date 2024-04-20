@@ -29,20 +29,21 @@
     display: flex;
     flex: 6;
     justify-content: end;
-    gap: 1.875rem;
+    gap: 22px;
     align-items: center;
     font-weight: 600;
 }
-.navMenu, .menusIcon:not(.menusIconPanel){
+.navMenu, .menusIcon{
     display: none;
 }
 .menus > li:hover {
     color: var(--negro);
 }
 .menusIconPanel {
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
+  width: 26px;
+  height: 26px;
+  margin-right: 4px;
+  display: flex;
 }
 @media (max-width:1232px) {
     .navInsignia img {
@@ -50,7 +51,7 @@
         max-height: 63px; 
     }
 }
-@media (max-width: 1025px)  {
+@media (max-width: 1285px)  {
     .navMenu, .menusIcon{
         display: block;
     }

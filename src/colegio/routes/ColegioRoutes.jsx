@@ -14,6 +14,7 @@ const HistoriaPage = lazy(() => import('../pages/HistoriaPage/HistoriaPage'))
 const ContactenosPage = lazy(() => import('../pages/ContactenosPage/ContactenosPage'))
 const GaleriaPage = lazy(() => import('../pages/GaleriaPage/GaleriaPage'))
 const InicialPage = lazy(() => import('../pages/InicialPage/InicialPage'))
+const AdmisionPage = lazy(() => import('../pages/AdmisionPage/AdmisionPage'))
 const InicioPage = lazy(() => import('../pages/InicioPage/InicioPage'))
 const MetodologiaPage = lazy(() => import('../pages/MetodologiaPage/MetodologiaPage'))
 const SomosPage = lazy(() => import('../pages/SomosPage/SomosPage'))
@@ -33,6 +34,7 @@ const ColegioRoutes = () => {
           <Route path='/inicio' element={<InicioPage />} />
           <Route path='/historia' element={<HistoriaPage />} />
           <Route path='/quienes-somos' element={<SomosPage />} />
+          <Route path='/admision' element={<AdmisionPage />} />
           <Route path='/inicial' element={<InicialPage />} />
           <Route path='/primaria' element={<PrimariaPage />} />
           <Route path='/metodologia' element={<MetodologiaPage />} />

@@ -18,7 +18,7 @@
     box-shadow: 0rem 0rem .625rem 0rem rgba(0,0,0,0.5);
     color: var(--negro);
 }
-@media (max-width: 1020px)  {
+@media (max-width: 1285px)  {
     .menusContenido{
         display: grid;
         grid-template-rows: var(--rows, 0fr);

@@ -7,8 +7,8 @@ import {
   Raya,
   Seccion,
   Tabs,
-  Noticia,
   Globo
+  , NoticiaCard
 } from '../../components'
 import {
   astronautaIcon,
@@ -244,33 +244,49 @@ export const Main = () => {
           <h2>Últimas Noticias <Raya /></h2>
 
           <div className='subContenedorN'>
-            <Noticia
+            <NoticiaCard
               imagen={imagenPrueba}
-              altImagen='Imagen de la Noticia'
-              fecha='Septiembre 22, 2024'
-              contenido=' Lorem ipsum dolor sit amet,
-              consectr adipiscing elit. our'
+              alt='imagen...'
+              titulo='titulo de la noticia'
+              fecha='14-03-2024'
+              contenido='Lorem ipsum dolor sit amet consectetur
+              ,met consectetur, met consectetur, met consectetur
+              ,met consectetur, met consectetur, adipisicing elit.
+              Tempora quaerat suscipit fuga perspiciatis harum
+              esse iusto quia, voluptas commodi nihil necessitatibus
+              consequuntur? Consequuntur beatae vero commodi nihil
+              provident esse fuga?'
               ejeX={200}
             />
-            <Noticia
+            <NoticiaCard
               imagen={imagenPrueba}
-              altImagen='Imagen de la Noticia'
-              fecha='Septiembre 22, 2024'
-              contenido=' Lorem ipsum dolor sit amet,
-              consectr adipiscing elit. our'
+              alt='imagen...'
+              titulo='titulo de la noticia'
+              fecha='14-03-2024'
+              contenido='Lorem ipsum dolor sit amet consectetur
+              ,met consectetur, met consectetur, met consectetur
+              ,met consectetur, met consectetur, adipisicing elit.
+              Tempora quaerat suscipit fuga perspiciatis harum
+              esse iusto quia, voluptas commodi nihil necessitatibus
+              consequuntur? Consequuntur beatae vero commodi nihil
+              provident esse fuga?'
               ejeX={200}
               delay={0.3}
-
             />
-            <Noticia
+            <NoticiaCard
               imagen={imagenPrueba}
-              altImagen='Imagen de la Noticia'
-              fecha='Septiembre 22, 2024'
-              contenido='Lorem ipsum dolor sit amet,
-              consectr adipiscing elit. our'
+              alt='imagen...'
+              titulo='titulo de la noticia'
+              fecha='14-03-2024'
+              contenido='Lorem ipsum dolor sit amet consectetur
+              ,met consectetur, met consectetur, met consectetur
+              ,met consectetur, met consectetur, adipisicing elit.
+              Tempora quaerat suscipit fuga perspiciatis harum
+              esse iusto quia, voluptas commodi nihil necessitatibus
+              consequuntur? Consequuntur beatae vero commodi nihil
+              provident esse fuga?'
               ejeX={200}
               delay={0.4}
-
             />
           </div>
           <Link to='/noticias' className='verMasNoticias'>

@@ -1,0 +1,9 @@
+.admisionPage {
+    padding-top: 74px;
+    overflow: hidden;
+}
+.admisionContent {
+    margin: 70px 0px;
+    padding: 0px 20px;
+    background-color: yellow;
+}

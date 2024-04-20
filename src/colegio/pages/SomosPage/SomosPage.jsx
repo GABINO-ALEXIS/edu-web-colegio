@@ -6,12 +6,12 @@ import {
   imagenPrueba
 } from '../../assets/imagenes'
 import {
-  DirectivaCard,
   Globo,
   Raya,
   Seccion,
   PropositoCard,
   MetaTags
+  , PlanaDirectiva
 } from '../../components'
 import {
   dinosaurioIcon,
@@ -158,29 +158,7 @@ const SomosPage = () => {
             crecimiento personal.
           </p>
           <div className='directivaContenedor'>
-            <DirectivaCard
-              imagen={imagenPrueba}
-              alt='imagen prueba'
-              nombre='Juan Torres Garcia'
-              cargo='Director'
-              ejeX={200}
-            />
-            <DirectivaCard
-              imagen={imagenPrueba}
-              alt='imagen prueba'
-              nombre='Juan Torres Garcia'
-              cargo='Director'
-              ejeX={200}
-              delay={0.3}
-            />
-            <DirectivaCard
-              imagen={imagenPrueba}
-              alt='imagen prueba'
-              nombre='Juan Torres Garcia'
-              cargo='Director'
-              ejeX={200}
-              delay={0.4}
-            />
+            <PlanaDirectiva />
           </div>
         </div>
       </div>
