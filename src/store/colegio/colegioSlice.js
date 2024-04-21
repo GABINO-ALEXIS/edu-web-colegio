@@ -48,7 +48,7 @@ export const estructuraWebColegialSlice = createSlice({
         },
         {
           id: 4,
-          url: 'https://res.cloudinary.com/colegio-inmaculada-concepcion/image/upload/v1713281083/estructura-web-colegial/paginas/somos-page/6769264_60111_hq046j.jpg',
+          url: 'https://res.cloudinary.com/colegio-inmaculada-concepcion/image/upload/v1713670628/estructura-web-colegial/paginas/somos-page/430920_xv1o8k.jpg',
           titulo: 'niños jugando'
         },
         {
@@ -75,54 +75,63 @@ export const estructuraWebColegialSlice = createSlice({
     noticiasPage: {
       noticias: [
         {
+          id: 1,
           imagen: 'https://res.cloudinary.com/colegio-inmaculada-concepcion/image/upload/v1713281083/estructura-web-colegial/paginas/somos-page/6769264_60111_hq046j.jpg',
           fecha: '14-03-2024',
           titulo: 'titulo de la noticia',
           contenido: 'Lorem ipsum dolor sit amet consectetur,met consectetur, met consectetur, met consectetur,met consectetur, met consectetur, adipisicing elit.Tempora quaerat suscipit fuga perspiciatis harumesse iusto quia, voluptas commodi nihil necessitatibusconsequuntur? Consequuntur beatae vero commodi nihilprovident esse fuga?'
         },
         {
+          id: 2,
           imagen: 'https://res.cloudinary.com/colegio-inmaculada-concepcion/image/upload/v1713281083/estructura-web-colegial/paginas/somos-page/6769264_60111_hq046j.jpg',
           fecha: '14-03-2024',
           titulo: 'titulo de la noticia',
           contenido: 'Lorem ipsum dolor sit amet consectetur,met consectetur, met consectetur, met consectetur,met consectetur, met consectetur, adipisicing elit.Tempora quaerat suscipit fuga perspiciatis harumesse iusto quia, voluptas commodi nihil necessitatibusconsequuntur? Consequuntur beatae vero commodi nihilprovident esse fuga?'
         },
         {
+          id: 3,
           imagen: 'https://res.cloudinary.com/colegio-inmaculada-concepcion/image/upload/v1713281083/estructura-web-colegial/paginas/somos-page/6769264_60111_hq046j.jpg',
           fecha: '14-03-2024',
           titulo: 'titulo de la noticia',
           contenido: 'Lorem ipsum dolor sit amet consectetur,met consectetur, met consectetur, met consectetur,met consectetur, met consectetur, adipisicing elit.Tempora quaerat suscipit fuga perspiciatis harumesse iusto quia, voluptas commodi nihil necessitatibusconsequuntur? Consequuntur beatae vero commodi nihilprovident esse fuga?'
         },
         {
+          id: 4,
           imagen: 'https://res.cloudinary.com/colegio-inmaculada-concepcion/image/upload/v1713281083/estructura-web-colegial/paginas/somos-page/6769264_60111_hq046j.jpg',
           fecha: '14-03-2024',
           titulo: 'titulo de la noticia',
           contenido: 'Lorem ipsum dolor sit amet consectetur,met consectetur, met consectetur, met consectetur,met consectetur, met consectetur, adipisicing elit.Tempora quaerat suscipit fuga perspiciatis harumesse iusto quia, voluptas commodi nihil necessitatibusconsequuntur? Consequuntur beatae vero commodi nihilprovident esse fuga?'
         },
         {
+          id: 5,
           imagen: 'https://res.cloudinary.com/colegio-inmaculada-concepcion/image/upload/v1713281083/estructura-web-colegial/paginas/somos-page/6769264_60111_hq046j.jpg',
           fecha: '14-03-2024',
           titulo: 'titulo de la noticia',
           contenido: 'Lorem ipsum dolor sit amet consectetur,met consectetur, met consectetur, met consectetur,met consectetur, met consectetur, adipisicing elit.Tempora quaerat suscipit fuga perspiciatis harumesse iusto quia, voluptas commodi nihil necessitatibusconsequuntur? Consequuntur beatae vero commodi nihilprovident esse fuga?'
         },
         {
+          id: 6,
           imagen: 'https://res.cloudinary.com/colegio-inmaculada-concepcion/image/upload/v1713281083/estructura-web-colegial/paginas/somos-page/6769264_60111_hq046j.jpg',
           fecha: '14-03-2024',
           titulo: 'titulo de la noticia',
           contenido: 'Lorem ipsum dolor sit amet consectetur,met consectetur, met consectetur, met consectetur,met consectetur, met consectetur, adipisicing elit.Tempora quaerat suscipit fuga perspiciatis harumesse iusto quia, voluptas commodi nihil necessitatibusconsequuntur? Consequuntur beatae vero commodi nihilprovident esse fuga?'
         },
         {
+          id: 7,
           imagen: 'https://res.cloudinary.com/colegio-inmaculada-concepcion/image/upload/v1713281083/estructura-web-colegial/paginas/somos-page/6769264_60111_hq046j.jpg',
           fecha: '14-03-2024',
           titulo: 'titulo de la noticia',
           contenido: 'Lorem ipsum dolor sit amet consectetur,met consectetur, met consectetur, met consectetur,met consectetur, met consectetur, adipisicing elit.Tempora quaerat suscipit fuga perspiciatis harumesse iusto quia, voluptas commodi nihil necessitatibusconsequuntur? Consequuntur beatae vero commodi nihilprovident esse fuga?'
         },
         {
+          id: 8,
           imagen: 'https://res.cloudinary.com/colegio-inmaculada-concepcion/image/upload/v1713281083/estructura-web-colegial/paginas/somos-page/6769264_60111_hq046j.jpg',
           fecha: '14-03-2024',
           titulo: 'titulo de la noticia',
           contenido: 'Lorem ipsum dolor sit amet consectetur,met consectetur, met consectetur, met consectetur,met consectetur, met consectetur, adipisicing elit.Tempora quaerat suscipit fuga perspiciatis harumesse iusto quia, voluptas commodi nihil necessitatibusconsequuntur? Consequuntur beatae vero commodi nihilprovident esse fuga?'
         },
         {
+          id: 9,
           imagen: 'https://res.cloudinary.com/colegio-inmaculada-concepcion/image/upload/v1713281083/estructura-web-colegial/paginas/somos-page/6769264_60111_hq046j.jpg',
           fecha: '14-03-2024',
           titulo: 'titulo de la noticia',

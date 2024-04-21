@@ -21,7 +21,7 @@
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 23px;
+    gap: 20px;
     max-width: 1280px
 }
 .imagenItem {
@@ -37,16 +37,16 @@
     height: auto;
 }
 .imagenItem::before {
-  content: url('../../assets/iconos/lupaIcon.svg');
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: var(--celeste);
-  position: absolute;
-  opacity: 0;
-  transition: all ease .4s;
+    content: url('../../assets/iconos/lupaIcon.svg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--celeste);
+    position: absolute;
+    opacity: 0;
+    transition: all ease .4s;
 }
 .imagenItem:hover::before{
     opacity: 0.9;
@@ -56,12 +56,14 @@
     transform: scale(1.09);
     z-index: 3;
 }   
-
 @media (max-width: 923px ) {
     .contenedorGaleria {
         margin-top: 50px;
     }
     .imagenItem {
       border-radius: 7px;
+    }
+    .galeriaContent {
+        gap: 5px;
     }
 }

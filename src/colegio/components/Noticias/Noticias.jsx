@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { NoticiaCard } from '../'
-import { imagenPrueba } from '../../assets/imagenes'
+
 export const Noticias = () => {
   const { noticiasPage } = useSelector((state) => state.estructuraWebColegial)
   const { noticias } = noticiasPage

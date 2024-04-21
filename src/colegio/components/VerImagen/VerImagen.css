@@ -1,0 +1,51 @@
+.verImagenContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #00000cc2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 22px;
+}
+.figure{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.figure img {
+   border-radius: 20px;
+}
+.botonLR {
+  width: 50px;
+  height: 50px;
+  color: var(--blanco);
+  position: absolute;
+  cursor: pointer;
+}
+.botonL {
+ left: 25px;
+}
+.botonR {
+  right: 25px;
+}
+.btnCerrarImagen {
+   width: 30px;
+   height: 30px;
+   margin: 10px 0px;
+   color: var(--blanco);
+   cursor: pointer;
+}
+@media (max-width: 650px ) {
+    .botonL {
+      left: 0;
+    }
+    .botonR {
+      right: 0;
+    }
+}
