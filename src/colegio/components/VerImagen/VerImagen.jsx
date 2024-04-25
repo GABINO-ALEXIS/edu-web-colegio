@@ -17,10 +17,10 @@ export const VerImagen = ({ id = 1, fotos, cerrarImg }) => {
   }
   const foto = fotos.find(foto => foto.id === count)
 
-  //   console.log(fotos)
-  //   console.log(foto)
-  //   console.log(id)
-  //   console.log(count)
+  const cerrarImagen = () => {
+    document.body.style.overflow = 'visible'
+    cerrarImg(false)
+  }
 
   return (
     <div className='verImagenContent'>
@@ -31,9 +31,12 @@ export const VerImagen = ({ id = 1, fotos, cerrarImg }) => {
       <figure className='figure'>
         <IoClose
           className='btnCerrarImagen'
-          onClick={() => cerrarImg(false)}
+          onClick={cerrarImagen}
         />
         <img src={foto.url} alt={foto.titulo} />
+        <span className='totalDeImagenes'>
+          {`${count} de ${fotos.length}`}
+        </span>
       </figure>
       <FaCaretRight
         className='botonLR botonR'

@@ -10,6 +10,7 @@ export const Galeria = () => {
   const { fotos } = galeriaPage
 
   const enviarId = ({ target }) => {
+    document.body.style.overflow = 'hidden'
     setImgVisible(true)
     setIdImg(target.id)
   }

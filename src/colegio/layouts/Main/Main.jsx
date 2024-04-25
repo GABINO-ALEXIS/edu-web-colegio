@@ -15,6 +15,7 @@ import {
   coheteIcon,
   flechaIcon
 } from '../../assets/iconos'
+import { useSelector } from 'react-redux'
 import { pergamino } from '../../assets/imagenes'
 import { Link } from 'react-router-dom'
 import { m } from 'framer-motion'
@@ -60,9 +61,12 @@ const animacionGridItem = {
 }
 
 export const Main = () => {
+  const { noticiasPage } = useSelector((state) => state.estructuraWebColegial)
+  const { noticias } = noticiasPage
+  const noticiasPrev = noticias.slice(0, 3)
+
   return (
     <main>
-
       <section className='portada'>
         <SeccionPortadaImagen />
         <SeccionValores />
@@ -242,52 +246,19 @@ export const Main = () => {
       <Seccion>
         <div className='contenedorNoticias'>
           <h2>Últimas Noticias <Raya /></h2>
-
           <div className='subContenedorN'>
-            <NoticiaCard
-              imagen={imagenPrueba}
-              alt='imagen...'
-              titulo='titulo de la noticia'
-              fecha='14-03-2024'
-              contenido='Lorem ipsum dolor sit amet consectetur
-              ,met consectetur, met consectetur, met consectetur
-              ,met consectetur, met consectetur, adipisicing elit.
-              Tempora quaerat suscipit fuga perspiciatis harum
-              esse iusto quia, voluptas commodi nihil necessitatibus
-              consequuntur? Consequuntur beatae vero commodi nihil
-              provident esse fuga?'
-              ejeX={200}
-            />
-            <NoticiaCard
-              imagen={imagenPrueba}
-              alt='imagen...'
-              titulo='titulo de la noticia'
-              fecha='14-03-2024'
-              contenido='Lorem ipsum dolor sit amet consectetur
-              ,met consectetur, met consectetur, met consectetur
-              ,met consectetur, met consectetur, adipisicing elit.
-              Tempora quaerat suscipit fuga perspiciatis harum
-              esse iusto quia, voluptas commodi nihil necessitatibus
-              consequuntur? Consequuntur beatae vero commodi nihil
-              provident esse fuga?'
-              ejeX={200}
-              delay={0.3}
-            />
-            <NoticiaCard
-              imagen={imagenPrueba}
-              alt='imagen...'
-              titulo='titulo de la noticia'
-              fecha='14-03-2024'
-              contenido='Lorem ipsum dolor sit amet consectetur
-              ,met consectetur, met consectetur, met consectetur
-              ,met consectetur, met consectetur, adipisicing elit.
-              Tempora quaerat suscipit fuga perspiciatis harum
-              esse iusto quia, voluptas commodi nihil necessitatibus
-              consequuntur? Consequuntur beatae vero commodi nihil
-              provident esse fuga?'
-              ejeX={200}
-              delay={0.4}
-            />
+            {noticiasPrev.map(({ id, imagen, fecha, titulo, contenido }, index) => (
+              <NoticiaCard
+                key={id}
+                imagen={imagen}
+                alt={titulo}
+                titulo={titulo}
+                fecha={fecha}
+                contenido={contenido}
+                ejeX={200}
+                delay={index - 0.2}
+              />
+            ))}
           </div>
           <Link to='/noticias' className='verMasNoticias'>
             Ver más Noticias <img src={flechaIcon} alt='Icono de flecha' />

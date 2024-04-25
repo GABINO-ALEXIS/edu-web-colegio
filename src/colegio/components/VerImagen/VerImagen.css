@@ -1,5 +1,5 @@
 .verImagenContent {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -20,6 +20,9 @@
 }
 .figure img {
    border-radius: 20px;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 .botonLR {
   width: 50px;
@@ -40,6 +43,10 @@
    margin: 10px 0px;
    color: var(--blanco);
    cursor: pointer;
+}
+.totalDeImagenes {
+    color: var(--blanco);
+    margin-right: 20px;
 }
 @media (max-width: 650px ) {
     .botonL {

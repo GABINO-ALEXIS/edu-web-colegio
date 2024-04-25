@@ -5,10 +5,11 @@ export const Noticias = () => {
   const { noticiasPage } = useSelector((state) => state.estructuraWebColegial)
   const { noticias } = noticiasPage
   console.log(noticias)
+
   return (
-    noticias.map(({ imagen, fecha, titulo, contenido }) => (
+    noticias.map(({ id, imagen, fecha, titulo, contenido }) => (
       <NoticiaCard
-        key={fecha}
+        key={id}
         imagen={imagen}
         alt={titulo}
         titulo={titulo}

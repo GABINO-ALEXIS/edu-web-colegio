@@ -8,6 +8,7 @@ import { Footer, Header } from '../layouts'
 import LoadingPage from '../pages/LoadingPage/LoadingPage'
 import { useDispatch } from 'react-redux'
 import { cerrarSesion } from '../../store/auth/thunks'
+import { comenzarLeerPaginas } from '../../store/colegio/thunks'
 
 const PrimariaPage = lazy(() => import('../pages/PrimariaPage/PrimariaPage'))
 const HistoriaPage = lazy(() => import('../pages/HistoriaPage/HistoriaPage'))
@@ -24,6 +25,7 @@ const ColegioRoutes = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(cerrarSesion())
+    dispatch(comenzarLeerPaginas())
   }, [])
 
   return (

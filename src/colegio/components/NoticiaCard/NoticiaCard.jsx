@@ -1,7 +1,10 @@
 import { m } from 'framer-motion'
 import './NoticiaCard.css'
 
-export const NoticiaCard = ({ imagen, alt, titulo, fecha, contenido, ejeX, delay }) => {
+export const NoticiaCard = ({ imagen, alt, titulo, fecha: objFecha, contenido, ejeX, delay }) => {
+  const milisegundos = objFecha.seconds * 1000
+  const fecha = new Date(milisegundos)
+
   return (
     <m.div
       className='cardNoticia'
@@ -26,7 +29,8 @@ export const NoticiaCard = ({ imagen, alt, titulo, fecha, contenido, ejeX, delay
         <div className='noticiaDescripcion'>
           <img src={imagen} alt={alt} />
           <h3>{titulo}</h3>
-          <time dateTime={fecha}>{fecha}</time>
+          <time dateTime='14-03-2024'>{fecha.getFullYear()}</time>
+          {/* <time dateTime={fecha}>{fecha}</time> */}
         </div>
       </div>
       <div className='face face2'>
