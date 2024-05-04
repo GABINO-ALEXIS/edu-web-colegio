@@ -1,0 +1,125 @@
+.sidebar {
+    background-color: #121515;
+    width: 255px;
+    height: 100%;
+    border-right: 3.5px solid var(--rojo);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .menuSidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #686969;
+  }
+  .itemMenuSidebar {
+    padding: 12px 0px 12px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    font-size: 1.0315rem;
+    font-weight: 500;
+  }
+  .itemMenuSidebar svg, .btnSalir svg {
+      width: 27px;
+      height: 27px;
+  }
+  .usuarioContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0px;
+  }
+  .imgUser {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--rojo);
+    padding: 5px;
+  }
+  .userName {
+      color: var(--blanco);
+      font-size: 18px;
+      margin-top: 4px;
+  }
+  .btnSalir {
+    padding: 7px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1.0315rem;
+    background-color: transparent;
+    color: var(--blanco);
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  .menuSide{
+      width: 33px;
+      height: 33px;
+      color: var(--blanco);
+      display: none;
+  }
+  .menuSidebar .active {
+      background-color: var(--rojo);
+      color: var(--blanco);
+      position: relative;
+  }
+  .menuSidebar .active::before {
+      content: "";
+      position: absolute;
+      background-color: var(--blanco);
+      width: 5.5px;
+      height: 100%;
+      left: 0;
+  }
+  @media (max-width: 1050px) {
+      .sidebar {
+        width: 100%;
+        height: 0;
+        padding: 20px 20px 40px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-right: none;
+        border-bottom: 3.5px solid var(--rojo);
+        position: static;
+      }
+      .menuSidebar {
+        display: none;
+      }
+      .menuSide {
+        display: block;
+      }
+      .usuarioContent {
+        flex-direction: row;
+        gap: 10px;
+      }
+      .imgUser {
+        width: 50px;
+        height: 50px;
+        border: 1px solid var(--rojo);
+      }  
+      .menuActivo {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 255px;
+        background-color: #121515;
+        padding-top: 50px;
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(17, 25, 40, 0.55);
+      }
+  }

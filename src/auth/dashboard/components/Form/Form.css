@@ -1,0 +1,19 @@
+.formDatos {
+  background-color: #121515;
+  color: var(--blanco);
+  padding: 11px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.formDatos .inputFormData {
+    padding: 8px 15px;
+    background-color: #303338;
+    font-size: 1rem;
+    color: var(--blanco);
+  }
+.formDatos .inputFormData:focus {
+      outline: none;
+      border-bottom: 2px solid var(--rojo);
+  }

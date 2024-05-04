@@ -1,5 +1,9 @@
-import { leerDocsPagina } from '../../colegio/helpers'
-import { setGaleriaPage, setNoticiasPage, setSomosPage } from './'
+import {
+  setGaleriaPage,
+  setNoticiasPage,
+  setSomosPage
+} from './'
+import { leerDocsPagina, serializarFecha } from '../../colegio/helpers'
 
 export const comenzarLeerPaginas = () => {
   return async (dispatch) => {
@@ -12,9 +16,16 @@ export const comenzarLeerPaginas = () => {
       const { fotosArray } = fotos
       const { noticiasArray } = noticias
 
+      noticiasArray.reverse().forEach(element => {
+        element.fecha = serializarFecha(element.fecha)
+      })
+      // const re = noticiasArray.map((element) => {
+      //   return { ...element, fecha: serializarFecha(element.fecha) }
+      // })
+
       dispatch(setSomosPage(planaDirectivaArray))
       dispatch(setGaleriaPage(fotosArray))
-      // dispatch(setNoticiasPage(noticiasArray))
+      dispatch(setNoticiasPage(noticiasArray))
 
       console.log(noticiasArray)
     } catch (e) {

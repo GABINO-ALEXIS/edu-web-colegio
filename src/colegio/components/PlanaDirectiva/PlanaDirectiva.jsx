@@ -14,7 +14,7 @@ export const PlanaDirectiva = () => {
         nombre={nombre}
         cargo={ocupacion}
         ejeX={200}
-        delay={index - 0.7}
+        delay={index - 0.3}
       />
     ))
   )

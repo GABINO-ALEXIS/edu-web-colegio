@@ -4,8 +4,8 @@ import { IoClose } from 'react-icons/io5'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { cerrarSesion } from '../../../store/auth/thunks'
-import user from '../assets/user.svg'
+import { cerrarSesion } from '../../../../store/auth/thunks'
+import user from '../../assets/user.svg'
 import './Sidebar.css'
 
 export const Sidebar = () => {
@@ -31,7 +31,7 @@ export const Sidebar = () => {
           className='itemMenuSidebar'
         >
           <HiHome />
-          Home
+          Página | Quiénes Somos
         </NavLink>
         <NavLink
           to='/admin-page-ic/pagina2'

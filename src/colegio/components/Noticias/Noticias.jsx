@@ -4,7 +4,6 @@ import { NoticiaCard } from '../'
 export const Noticias = () => {
   const { noticiasPage } = useSelector((state) => state.estructuraWebColegial)
   const { noticias } = noticiasPage
-  console.log(noticias)
 
   return (
     noticias.map(({ id, imagen, fecha, titulo, contenido }) => (

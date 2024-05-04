@@ -4,7 +4,8 @@
   overflow: hidden;
 }
 .noticiasContent {
-  margin: 50px 0px;
+  margin: 75px 0px;
+  /* margin-bottom: 75px; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
   gap: 20px;

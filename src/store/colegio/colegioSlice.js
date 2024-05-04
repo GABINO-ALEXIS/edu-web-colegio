@@ -30,7 +30,7 @@ export const estructuraWebColegialSlice = createSlice({
       state.galeriaPage.fotos = payload
     },
     setNoticiasPage: (state, { payload }) => {
-      state.noticiasPage.noticias = payload
+      state.noticiasPage.noticias = [...payload]
     }
   }
 })

@@ -1,0 +1,42 @@
+.somosPageDashboard {
+  background-color: #303338;
+  flex: auto;
+  padding: 30px;
+  overflow: auto;
+
+}
+.btnAgregarDirectiva {
+  background-color: var(--rojo);
+  width: 100%;
+  padding: 10px 0px;
+  color: var(--blanco);
+  font-weight: 600;
+  font-family: 'Baloo 2', sans-serif;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.errorMessage {
+ border: 2px solid var(--amarillo);
+ color: var(--amarillo);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 5px;
+ position: relative;
+}
+.errorMessage::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent; /* Define el lado izquierdo transparente */
+  border-right: 10px solid transparent; /* Define el lado derecho transparente */
+  border-bottom: 10px solid var(--amarillo); 
+}
+@media (max-width: 1050px) {
+
+  .somosPageDashboard {
+    padding: 15px;
+  }
+}

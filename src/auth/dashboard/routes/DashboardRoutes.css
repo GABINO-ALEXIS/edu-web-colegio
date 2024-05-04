@@ -5,6 +5,7 @@
     box-sizing: border-box;
     padding: 25px;
     display: flex;
+    overflow: auto;
 }
 @media (max-width: 1050px) {
  .pagesContent {
