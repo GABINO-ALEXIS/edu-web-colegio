@@ -1,0 +1,82 @@
+.containerBody {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.24);
+  animation: aparecer .5s;
+}
+.alertContainer {
+  background-color: var(--blanco);
+  padding: 17px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 13px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  animation: agrandar .7s;
+}
+.alertContainer svg {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.alertContainer > span {
+    align-self: start;
+}
+.alertContainer > span .alertTitle {
+    font-size: 20px;
+    font-weight: 600;
+}
+.alertBotonesContainer {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.alertBotonesContainer button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.alertBotonesContainer button:nth-child(1) {
+    border: 2px solid gray;
+    background-color: transparent;
+    border-radius: 5px;
+    color: gray;
+    font-weight: 600;
+}
+.alertBotonesContainer button:nth-child(2) {
+    border: 2px solid var(--rojo);
+    background-color: transparent;
+    border-radius: 5px;
+    color: var(--rojo);
+    font-weight: 600;
+}
+.alertBotonesContainer button:nth-child(2):hover {
+    background-color: var(--rojo);
+    color: #fff;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes agrandar {
+    0% {
+        transform: scale(.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

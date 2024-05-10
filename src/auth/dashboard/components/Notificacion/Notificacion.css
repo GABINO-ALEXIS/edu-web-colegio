@@ -1,24 +1,9 @@
-
-.containerTT{
-    /* width: 100vw;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 500px;
-    background-color: #ff0057;
-    flex-wrap: wrap;
-    gap: 20px; */
-    width: 100vw;
-    height: 100vh;
-    background-color: #1e1e1f;
-}
-
-
-/* .containerNotificacion{
+.containerNotificacion{
     position: absolute;
+    z-index: 10;
     top: 35px;
     right: 0;
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
     color: #fff;
     margin-bottom: 10px;
     width: 400px;
@@ -26,11 +11,13 @@
     grid-template-columns: 70px 1fr 70px;
     border-radius: 5px;
     --color: #0abf30;
-    background-image: 
-        linear-gradient(
-            to right, #0abf3055, #22242f 30%
-        ); 
-    animation: show 0.3s ease 1 forwards  
+    animation: show 0.3s ease 1 forwards;
+    background-color: #fff;
+    color: #121515;
+    border-left: 5px solid var(--color);
+    box-shadow: 10px 10px 5px 0px #121515;
+    -webkit-box-shadow: 10px 10px 5px 0px #121515;
+    -moz-box-shadow: 10px 10px 5px 0px #121515;
 }
 .containerNotificacion .iconNotificacion{
     color: var(--color);
@@ -40,15 +27,15 @@
     font-size: x-large;
 }
 .containerNotificacion .title{
-    font-size: x-large;
     font-weight: bold;
+    font-size: 20px;
 }
 .containerNotificacion span, .containerNotificacion .iconNotificacion:nth-child(3){
-    color: #fff;
     opacity: 0.6;
+    color: #22242F;
 }
 .contentNotificacion {
-    line-height: 28px;
+    line-height: 25px;
 }
 .iconNotificacion{
    display: flex;
@@ -79,10 +66,9 @@
     left: 0;
     background-color: var(--color);
     width: 100%;
-    height: 3px;
+    height: 3.5px;
     content: '';
-    box-shadow: 0 0 10px var(--color);
-    animation: timeOut 3s linear 1 forwards
+    animation: timeOut 4s linear 1 forwards
 }
 @keyframes timeOut{
     to{
@@ -91,22 +77,10 @@
 }
 .containerNotificacion.error{
     --color: #f24d4c;
-    background-image: 
-        linear-gradient(
-            to right, #f24d4c55, #22242F 30%
-        );
 }
 .containerNotificacion.warning{
     --color: #e9bd0c;
-    background-image: 
-        linear-gradient(
-            to right, #e9bd0c55, #22242F 30%
-        );
 }
 .containerNotificacion.info{
     --color: #3498db;
-    background-image: 
-        linear-gradient(
-            to right, #3498db55, #22242F 30%
-        );
-} */
+}

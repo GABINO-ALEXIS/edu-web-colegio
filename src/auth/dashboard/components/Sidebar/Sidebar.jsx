@@ -27,11 +27,18 @@ export const Sidebar = () => {
         className={`menuSidebar ${menuOpen ? 'menuActivo' : null}`}
       >
         <NavLink
-          to='/admin-page-ic/inicio-dashboard'
+          to='/admin-page-ic/quienes-somos-dashboard'
           className='itemMenuSidebar'
         >
           <HiHome />
           Página | Quiénes Somos
+        </NavLink>
+        <NavLink
+          to='/admin-page-ic/noticias-dashboard'
+          className='itemMenuSidebar'
+        >
+          <HiDocumentArrowUp />
+          Página | Noticias
         </NavLink>
         <NavLink
           to='/admin-page-ic/pagina2'

@@ -1,18 +1,17 @@
 .viewDetailContainer {
     width: 100%;
-    height: 100%;
 }
 .viewDetailTitle {
-    width: 100%;
-    padding: 7px 10px;
-    color: var(--blanco);
-    border-bottom: 2px solid var(--rojo);
-    margin-bottom: 25px;
+  width: 100%;
+  padding: 7px 10px;
+  color: var(--blanco);
+  border-bottom: 2px solid var(--rojo);
+  margin-bottom: 25px;
 }
 .viewDetailContent {
   width: 100%;
-  height: auto;
   padding: 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }

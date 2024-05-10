@@ -2,6 +2,8 @@ import { m } from 'framer-motion'
 import './NoticiaCard.css'
 
 export const NoticiaCard = ({ imagen, alt, titulo, fecha, contenido, ejeX, delay }) => {
+  const arrayFecha = fecha.split('-').reverse()
+  const newFecha = arrayFecha.join('-')
   return (
     <m.div
       className='cardNoticia'
@@ -26,8 +28,8 @@ export const NoticiaCard = ({ imagen, alt, titulo, fecha, contenido, ejeX, delay
         <div className='noticiaDescripcion'>
           <img src={imagen} alt={alt} />
           <h3>{titulo}</h3>
-          <time dateTime={`${fecha.day}-${fecha.month}-${fecha.year}`}>
-            {`${fecha.day}-${fecha.month}-${fecha.year}`}
+          <time dateTime={newFecha}>
+            {newFecha}
           </time>
         </div>
       </div>

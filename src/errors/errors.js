@@ -22,3 +22,9 @@ export class DocumentsReferenceError extends Error {
     this.name = 'DocumentsReferenceError'
   }
 }
+export class ProcessReferenceError extends Error {
+  constructor (message) {
+    super(message)
+    this.name = 'ProcessReferenceError'
+  }
+}

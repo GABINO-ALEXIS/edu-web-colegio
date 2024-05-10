@@ -1,19 +1,19 @@
-import { useRef, useState, useMemo } from 'react'
+import { useRef, useState } from 'react'
 import { leerArchivo } from '../../../colegio/helpers'
 
-export const useUploadFile = (setValue, setInputFile, clearErrors, resetImage) => {
+export const useUploadFile = (clearErrors) => {
   const fileRef = useRef(null)
   const [dragEnter, setDragEnter] = useState(false)
-  const [fileState, setFileState] = useState(null)
+  const [fileState, setFileState] = useState({
+    fileObj: null,
+    base64: null
+  })
 
   const onChangeFile = async ({ target }) => {
-    const fileValid = target.files[0]
-    if (!fileValid) return setValue('dFoto', 'Foto requerido')
-    const result = await leerArchivo(target.files[0])
-    setFileState(result)
-    setValue('dFoto', result)
+    const file = target.files[0]
+    const result = await leerArchivo(file)
+    setFileState({ fileObj: file, base64: result })
     clearErrors('dFoto')
-    setInputFile(true)
   }
 
   const onDragOver = e => e.preventDefault()
@@ -23,19 +23,21 @@ export const useUploadFile = (setValue, setInputFile, clearErrors, resetImage) =
   const onDrop = async (e) => {
     e.preventDefault()
     setDragEnter(false)
-    console.log(e.dataTransfer.files[0].name)
-    const result = await leerArchivo(e.dataTransfer.files[0])
-    setFileState(result)
-    setValue('dFoto', result)
+    const file = e.dataTransfer.files[0]
+    const cadena = file.name
+    const indice = cadena.lastIndexOf('.')
+    const extension = cadena.substr(indice)
+    const isValid = extension === '.png' || extension === '.jpg'
+    if (!isValid) return alert('Seleccione una imagen válida')
+    const result = await leerArchivo(file)
+    setFileState({ fileObj: file, base64: result })
     clearErrors('dFoto')
-    setInputFile(true)
   }
-
-  useMemo(() => resetImage && setFileState(null), [resetImage])
 
   return {
     dragEnter,
     fileState,
+    setFileState,
     fileRef,
     onDragOver,
     onDragEnter,

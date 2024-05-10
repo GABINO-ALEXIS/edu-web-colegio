@@ -34,6 +34,7 @@ img, picture, video, iframe, figure {
 }
 body {
   font-family: 'Baloo 2', sans-serif;
+  overflow-x: hidden;
 }
 html {
   scroll-behavior: smooth;

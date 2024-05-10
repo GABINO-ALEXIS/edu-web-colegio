@@ -1,22 +1,17 @@
 /* eslint-disable react/jsx-indent */
-import { Alert, Form, Notificacion, ViewDetail, ViewDirectivas } from '../../components'
-import { MdCloudUpload } from 'react-icons/md'
+import { Form, ViewDetail } from '../../components'
 import { useUploadFile } from '../../hooks'
+import { MdCloudUpload } from 'react-icons/md'
+import { useMemo } from 'react'
 import { useForm } from 'react-hook-form'
-import { useMemo, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { agregarData, eliminarData } from '../../../../store/colegio/thunks'
+import './NoticiasPageDashboard.css'
+import Noticia from '../../entidades/Noticia'
 import { fileUploadClaudinary } from '../../../../colegio/helpers'
-import Persona from '../../entidades/Persona'
-import './somosPageDashboard.css'
+import { useDispatch } from 'react-redux'
+import { agregarData } from '../../../../store/colegio/thunks'
 
-export const SomosPageDashboard = () => {
+const NoticiasPageDashboard = () => {
   const dispatch = useDispatch()
-  const [saving, setSaving] = useState(false)
-  const { somosPage, reading } = useSelector((state) => state.estructuraWebColegial)
-  const { planaDirectiva } = somosPage
-  const [alertView, setAlertView] = useState(false)
-  const [idItem, setIdItem] = useState(null)
 
   const {
     register,
@@ -50,64 +45,42 @@ export const SomosPageDashboard = () => {
       ? enviarDatos(data)
       : setError('dFoto', {
         type: 'required',
-        message: 'La foto es requerido',
+        message: 'La imagen es requerido',
         shouldFocus: true
       })
   }
 
   const enviarDatos = async (data) => {
-    const URL = await fileUploadClaudinary(data.dFoto, 'somos-page')
-    const persona = new Persona(data.dName, data.dCargo, URL)
-    const dataObjetoPlano = persona.objetoPlano()
-    dispatch(agregarData('somosPage', 'planaDirectiva', 'planaDirectivaArray', dataObjetoPlano))
+    console.log(data)
+    const { nTitulo, dFoto, nDescripcion, nFecha } = data
+    const URL = await fileUploadClaudinary(dFoto, 'noticias-page')
+    const noticia = new Noticia(nTitulo, nDescripcion, nFecha, URL)
+    const dataObjetoPlano = noticia.objetoPlano()
+    dispatch(agregarData('noticiasPage', 'noticias', 'noticiasArray', dataObjetoPlano, nFecha))
 
-    reset()
-    setFileState({ fileObj: null, base64: null })
-    mostrarNotificacion()
+    console.log(dataObjetoPlano)
+    // reset()
+    // setFileState({ fileObj: null, base64: null })
+    // mostrarNotificacion()
   }
 
-  const mostrarNotificacion = () => {
-    setSaving(true)
+  const onChange = (e) => {
+    const f = e.target.value
 
-    setTimeout(() => {
-      setSaving(false)
-    }, 4000)
+    const fecha = new Date(f)
+
+    console.log(fecha)
   }
 
-  const borrarData = () => {
-    dispatch(eliminarData('somosPage', 'planaDirectiva', 'planaDirectivaArray', idItem))
-  }
-  const mostrarAlert = () => setAlertView(true)
-
-  const confirm = () => {
-    setAlertView(false)
-    borrarData()
-  }
-  const denied = () => setAlertView(false)
   return (
-    <div className='somosPageDashboard'>
-      {alertView &&
-      <Alert
-        denied={denied}
-        confirm={confirm}
-      />}
-        {saving
-          ? <Notificacion
-              type='success'
-              titulo='Agregado con éxito'
-              texto='Se agrego un nuevo personal'
-              desmontar={() => setSaving(false)}
-            />
-          : null}
-      <ViewDetail titulo='Agregar Plana Directiva'>
-        <Form
-          onsubmitForm={handleSubmit(onSubmit)}
-        >
+    <div className='noticiasPageDashboard'>
+      <ViewDetail titulo='Agregar Noticia'>
+        <Form onsubmitForm={handleSubmit(onSubmit)}>
           <input
             className='inputFormData'
-            placeholder='Nombre'
+            placeholder='Titulo de la noticia'
             type='text'
-            {...register('dName', {
+            {...register('nTitulo', {
               required: 'Nombre requerido',
               minLength: {
                 value: 2,
@@ -121,11 +94,10 @@ export const SomosPageDashboard = () => {
                 return value.trim().length >= 1 || 'Complete el campo correctamente'
               }
             })}
-
           />
-          {errors.dName &&
+          {errors.nTitulo &&
             <span className='errorMessage'>
-              {errors.dName.message}
+              {errors.nTitulo.message}
             </span>}
           <div
             className={`unploadFileContainer ${dragEnter ? 'dragEnter' : ''}`}
@@ -172,44 +144,44 @@ export const SomosPageDashboard = () => {
             <span className='errorMessage'>
               {errors.dFoto.message}
             </span>}
+            <textarea
+              className='textAreaForm'
+              placeholder='Descripción de la noticia. . .'
+              {...register('nDescripcion', {
+                required: 'Descripción requerido',
+                minLength: {
+                  value: 35,
+                  message: 'Debe tener al menos 35 caracteres'
+                },
+                maxLength: {
+                  value: 340,
+                  message: 'Debe tener máximo 340 caracteres'
+                }
+              })}
+            />
+            {errors.nDescripcion &&
+            <span className='errorMessage'>
+              {errors.nDescripcion.message}
+            </span>}
           <input
             className='inputFormData'
-            placeholder='Cargo'
-            type='text'
-            {...register('dCargo', {
-              required: 'Cargo requerido',
-              minLength: {
-                value: 2,
-                message: 'Debe tener al menos dos letras'
-              },
-              maxLength: {
-                value: 20,
-                message: 'Debe tener máximo 20 caracteres'
-              },
-              validate: (value) => {
-                return value.trim().length >= 1 || 'Complete el campo correctamente'
-              }
+            type='date'
+            onChange={onChange}
+            {...register('nFecha', {
+              required: 'Fecha requerido'
             })}
           />
-          {errors.dCargo &&
+          {errors.nFecha &&
             <span className='errorMessage'>
-              {errors.dCargo.message}
+              {errors.nFecha.message}
             </span>}
           <button className='btnAgregarDirectiva'>
             AGREGAR
           </button>
         </Form>
       </ViewDetail>
-      <ViewDetail
-        titulo='Plana Directiva:'
-      >
-        {reading && <h1>Cargando...</h1>}
-       <ViewDirectivas
-         planaDirectiva={planaDirectiva}
-         setIdItem={setIdItem}
-         mostrarAlert={mostrarAlert}
-       />
-      </ViewDetail>
     </div>
   )
 }
+
+export default NoticiasPageDashboard
